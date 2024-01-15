@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Employees</title>
+        <link rel="stylesheet" href="/EmployeeList.css">
+    </head>
+    <body>
+        <h1>Employees</h1>
+        <p><a href = '/MainPortal'>Back</a></p>
+    
+            <button type="button" onclick="addEmployeeDetails()" >Add</button>
+            <button type="button" onclick="removeEmployeeDetails()">Remove</button>
+
+                <form id="addEmployeeForm" style="display: none;" action="/addEmployee" method="post" autocomplete="off">
+                <div id="addEmployee">
+
+                    <label for="employeeName">Name :</label>
+                    <input type="text" id="employeeName" name = "name">
+
+                    <input type="radio" id="tamil" name="region" value="Tamil">
+                    <label for="tamil" >Tamil</label>
+                    <input type="radio" id="north"  name="region" value="North">
+                    <label for="north">North</label>
+                    
+                    <input type="submit" value="submit">
+                    <button type="button" onclick="collapseAddEmployee()">Cancel</button>
+                </div>
+                </form>
+
+                <form id="removeEmployeeForm" style="display: none;"  action="/removeEmployee" method="post" autocomplete="off">
+                    <div id="removeEmployee">
+    
+                        <label for="employeeName">Name :</label>
+                        <input type="text" id="employeeName" name="name">
+                        <input type="submit">
+                        <button type="button" onclick="collapseRemoveEmployee()">Cancel</button>
+                    </div>
+                </form>
+                <br>
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>REGION</th>
+                    </tr>
+                    <% employee.forEach((employee)=> {%>
+                        <tr>
+                            <td><%= employee.name %></td>
+                            <td><%= employee.region %></td>
+                        </tr>
+                    <% });%>
+                </table>
+
+        <script src="/Script.js"></script>
+    </body>
+</html>

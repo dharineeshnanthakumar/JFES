@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log</title>
+</head>
+<body>
+    <h1>LOGSHEET</h1>
+    <p><a href = '/MainPortal'>Back</a></p> 
+    <form action="/submitLog" method="post">
+        <div>
+            <label for="day" >Choose Date :</label>
+            <select id="day" name="Day" >
+                <option value="">Choose Day</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <input type="submit">
+        </div>
+            <br>
+        <div>
+            <label for="koparai">Koparai :</label>
+            <input type="number" name="noOfKoparais" id="koparai" >
+        </div>
+            <br>
+        <div>
+            <label for="price">Price :</label>
+            <input type="number" name="pricePerKoparai" id="price">           
+        </div>
+            <br>
+        <% employee.forEach((employee)=>{%>
+            <div>
+                <label id="attendance"><%= employee.name %> : </label>
+                <input type="checkbox" name="<%= employee.name %>.attendance" value="present" id="attendance" onclick="">
+                
+            </div>
+        <%})%>
+    </form> 
+
+    </script>
+</body>
+</html>

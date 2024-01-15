@@ -1,0 +1,32 @@
+#addEmployee{
+    border: 1px solid black;
+    padding : 5px;
+    width:fit-content;
+}
+
+#addEmployeeForm{
+    padding-top : 10px;
+}
+
+#removeEmployeeForm{
+    padding-top : 10px;
+
+}
+
+#removeEmployee{
+    border: 1px solid black;
+    padding : 5px;
+    width:fit-content;  
+}
+
+table{
+    table-layout: fixed;
+    width: 50%;
+    border: 1px solid black;
+    border-collapse: collapse ;
+}
+
+tr,th,td{
+    border:1px solid black;
+}
+
